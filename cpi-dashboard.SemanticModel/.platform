@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "cpi-dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1d44623d-ec53-44c8-bd2e-0e85fe991da1"
+  }
+}

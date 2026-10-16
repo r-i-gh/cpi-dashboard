@@ -7,15 +7,13 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation __PBI_TimeIntelligenceEnabled = 1
+annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBI_QueryOrder = ["zmi2025s"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
 ref table zmi2025s
-ref table DateTableTemplate_78df6cfa-75b4-43ae-a599-4e3c36034de2
-ref table LocalDateTable_507f4290-4ffa-4820-aa9f-b23c784261ee
 
 ref cultureInfo ja-JP
 

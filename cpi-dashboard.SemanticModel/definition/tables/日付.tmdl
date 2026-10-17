@@ -1,0 +1,57 @@
+table 日付
+	lineageTag: ec458f5b-0ae7-41dd-9825-538d1bcb7d43
+	dataCategory: Time
+
+	column 日付
+		isKey
+		formatString: General Date
+		lineageTag: 87f9ce64-0feb-40ab-ba5a-8eb041e41ab5
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [日付]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 年
+		formatString: 0
+		lineageTag: e725b436-f8d7-47e1-abb2-2a3ef99c1b94
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [年]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 月
+		formatString: 0
+		lineageTag: 5be67a8f-98d1-4ce8-b984-4cb2a45fba8b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [月]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 年月ラベル
+		lineageTag: e6d58793-0d96-494b-ae5f-bf90d954f9c6
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [年月ラベル]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 日付 = calculated
+		mode: import
+		source =
+				
+				VAR StartDate = DATE(1970, 1, 1)
+				VAR EndDate = EOMONTH(MAX(zmi2025s[年月]), 0)
+				RETURN
+				SELECTCOLUMNS(
+				    CALENDAR(StartDate, EndDate),
+				    "日付", [Date],
+				    "年", YEAR([Date]),
+				    "月", MONTH([Date]),
+				    "年月ラベル", FORMAT([Date], "yyyy/MM")
+				)
+
+	annotation PBI_Id = 5f932a84cc3b42d3b184f0b9320d0f5a
+

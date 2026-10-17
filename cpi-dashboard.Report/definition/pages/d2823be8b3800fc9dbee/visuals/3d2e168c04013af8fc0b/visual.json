@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "zmi2025s.最新月ラベル",
-              "nativeQueryRef": "最新月ラベル"
+              "nativeQueryRef": "データの月",
+              "displayName": "データの月"
             }
           ]
         }

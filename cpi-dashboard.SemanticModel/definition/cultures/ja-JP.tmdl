@@ -172,6 +172,16 @@ cultureInfo ja-JP
 			          "最新月ラベル": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "データの月": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },

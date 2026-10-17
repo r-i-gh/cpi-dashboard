@@ -206,6 +206,16 @@ cultureInfo ja-JP
 			          }
 			        },
 			        {
+			          "生鮮食品及びエネルギーを除く総合": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
 			          "総合": {
 			            "State": "Suggested",
 			            "Source": {
@@ -217,16 +227,6 @@ cultureInfo ja-JP
 			        },
 			        {
 			          "生鮮食品を除く総合": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "生鮮食品及びエネルギーを除く総合": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",

@@ -1,0 +1,61 @@
+table zmy2025s
+	lineageTag: 3f276e80-717f-4673-9953-94e6bae78dbf
+
+	column 年月コード
+		dataType: int64
+		formatString: 0
+		lineageTag: e4fec70b-caab-4dfc-bf9c-88198161cec4
+		summarizeBy: sum
+		sourceColumn: 年月コード
+
+		annotation SummarizationSetBy = Automatic
+
+	column 系列
+		dataType: string
+		lineageTag: 89547396-02fb-4744-98cb-31f186686785
+		summarizeBy: none
+		sourceColumn: 系列
+
+		annotation SummarizationSetBy = Automatic
+
+	column 前年同月比_公表
+		dataType: double
+		lineageTag: 29ae17e3-9555-4bcf-8901-982378e34604
+		summarizeBy: sum
+		sourceColumn: 前年同月比_公表
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 年月
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 12710a0e-c1ab-42a4-b854-184486cbccfc
+		summarizeBy: none
+		sourceColumn: 年月
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition zmy2025s = m
+		mode: import
+		source =
+				let
+				  ソース = Csv.Document(File.Contents("C:\Users\rio\Documents\cpi-dashboard\data\zmy2025s.csv"), [Delimiter = ",", Columns = 79, Encoding = 932]),
+				  昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars = true]),
+				  削除された上位の行 = Table.Skip(昇格されたヘッダー数, 5),
+				  変更された列タイプ = Table.TransformColumnTypes(削除された上位の行, {{"類・品目", Int64.Type}, {"総合", type number}, {"生鮮食品を除く総合", type number}, {"持家の帰属家賃を除く総合", type number}, {"持家の帰属家賃及び生鮮食品を除く総合", type number}, {"生鮮食品及びエネルギーを除く総合", type number}, {"食料（酒類を除く）及びエネルギーを除く総合", type number}, {"食料", type number}, {"生鮮食品", type number}, {"生鮮食品を除く食料", type number}, {"穀類", type number}, {"魚介類", type number}, {"生鮮魚介（再掲）", type number}, {"肉類", type number}, {"乳卵類", type number}, {"野菜・海藻", type number}, {"生鮮野菜（再掲）", type number}, {"果物", type number}, {"生鮮果物（再掲）", type number}, {"油脂・調味料", type number}, {"菓子類", type number}, {"調理食品", type number}, {"飲料", type number}, {"酒類", type number}, {"外食", type number}, {"住居", type number}, {"持家の帰属家賃を除く住居", type number}, {"家賃", type number}, {"持家の帰属家賃を除く家賃", type number}, {"設備修繕・維持", type number}, {"光熱・水道", type number}, {"電気代", type number}, {"ガス代", type number}, {"他の光熱", type number}, {"上下水道料", type number}, {"家具・家事用品", type number}, {"家庭用耐久財", type number}, {"室内装備品", type number}, {"寝具類", type number}, {"家事雑貨", type number}, {"家事用消耗品", type number}, {"家事サービス", type number}, {"被服及び履物", type number}, {"衣料", type number}, {"和服", type number}, {"洋服", type number}, {"シャツ・セーター・下着類", type number}, {"シャツ・セーター類", type number}, {"下着類", type number}, {"履物類", type number}, {"他の被服", type number}, {"被服関連サービス", type number}, {"保健医療", type number}, {"医薬品・健康保持用摂取品", type number}, {"保健医療用品・器具", type number}, {"保健医療サービス", type number}, {"交通・通信", type number}, {"交通", type number}, {"自動車等関係費", type number}, {"通信", type number}, {"教育", type number}, {"授業料等", type number}, {"教科書・学習参考教材", type number}, {"補習教育", type number}, {"教養娯楽", type number}, {"教養娯楽用耐久財", type number}, {"教養娯楽用品", type number}, {"書籍・他の印刷物", type number}, {"教養娯楽サービス", type number}, {"諸雑費", type number}, {"理美容サービス", type number}, {"理美容用品", type number}, {"身の回り用品", type number}, {"たばこ", type number}, {"他の諸雑費", type number}, {"エネルギー", type number}, {"教育関係費", type number}, {"教養娯楽関係費", type number}, {"情報通信関係費", type text}}, "ja"),
+				  ピボット解除された他の列 = Table.UnpivotOtherColumns(変更された列タイプ, {"類・品目"}, "属性", "値"),
+				  名前が変更された列 = Table.RenameColumns(ピボット解除された他の列, {{"類・品目", "年月コード"}, {"属性", "系列"}, {"値", "指数"}}),
+				  #"変更された列タイプ 1" = Table.TransformColumnTypes(名前が変更された列, {{"指数", type number}}),
+				  追加されたカスタム = Table.AddColumn(#"変更された列タイプ 1", "年月", each #date(Number.IntegerDivide([年月コード], 100), Number.Mod([年月コード], 100), 1)),
+				  #"変更された列タイプ 2" = Table.TransformColumnTypes(追加されたカスタム, {{"年月", type date}}),
+				  フィルター処理された行 = Table.SelectRows(#"変更された列タイプ 2", each ([指数] <> null and [指数] <> "")),
+				  #"名前が変更された列 1" = Table.RenameColumns(フィルター処理された行, {{"指数", "前年同月比_公表"}})
+				in
+				  #"名前が変更された列 1"
+
+	annotation PBI_ResultType = Table
+

@@ -32,6 +32,19 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 568,
+            "y": 12
+          },
+          "nodeIndex": "zmy2025s",
+          "nodeLineageTag": "3f276e80-717f-4673-9953-94e6bae78dbf",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "すべてのテーブル",

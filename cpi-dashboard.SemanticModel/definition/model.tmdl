@@ -9,12 +9,13 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["zmi2025s"]
+annotation PBI_QueryOrder = ["zmi2025s","zmy2025s"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
 ref table zmi2025s
 ref table 日付
+ref table zmy2025s
 
 ref cultureInfo ja-JP
 

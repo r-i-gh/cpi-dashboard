@@ -1,0 +1,190 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "556ecc5c7a434a7cf05f",
+  "position": {
+    "x": 9.14580593941499,
+    "y": 0,
+    "z": 0,
+    "height": 893.240380082864,
+    "width": 646.30361971865932,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "zmi2025s"
+                    }
+                  },
+                  "Property": "指数（値）"
+                }
+              },
+              "queryRef": "zmi2025s.指数（値）",
+              "nativeQueryRef": "指数（値）"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "zmi2025s"
+                    }
+                  },
+                  "Property": "前年同月比"
+                }
+              },
+              "queryRef": "zmi2025s.前年同月比",
+              "nativeQueryRef": "前年同月比"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "zmi2025s"
+                    }
+                  },
+                  "Property": "系列"
+                }
+              },
+              "queryRef": "zmi2025s.系列",
+              "nativeQueryRef": "系列"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "zmi2025s"
+                  }
+                },
+                "Property": "前年同月比"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "4a329985868d09f7990d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "zmi2025s"
+              }
+            },
+            "Property": "指数（値）"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8d0fbd86f32aeb28a4fa",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "zmi2025s"
+              }
+            },
+            "Property": "前年同月比"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d13cb7675a3d76a3db0e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "日付"
+              }
+            },
+            "Property": "年月ラベル"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "日",
+              "Entity": "日付",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "日"
+                          }
+                        },
+                        "Property": "年月ラベル"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'2026/08'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {}
+            }
+          ]
+        }
+      },
+      {
+        "name": "a01ec04bbd84667b0cb8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "zmi2025s"
+              }
+            },
+            "Property": "系列"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

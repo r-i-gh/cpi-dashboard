@@ -23,6 +23,26 @@ table zmi2025s
 		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: f2ac6f3f-3000-4c2a-85c7-b8f4c0d895d6
 
+	measure 最新月 =
+			
+			CALCULATE(MAX(zmi2025s[年月]), REMOVEFILTERS('日付'))
+		formatString: General Date
+		lineageTag: d6a3b1c6-505b-41cb-beb6-80176478d82d
+
+	measure 最新月ラベル = FORMAT([最新月], "yyyy年M月")
+		lineageTag: e29d469f-a0b5-41ac-b96b-e75cc2e3293b
+
+	measure 前年同月比（最新月） =
+			
+			VAR LatestDate = [最新月]
+			RETURN
+			CALCULATE(
+			    [前年同月比],
+			    DATESBETWEEN('日付'[日付], LatestDate, EOMONTH(LatestDate, 0))
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 3331b55c-35cb-4358-a523-920430bdd223
+
 	column 年月コード
 		dataType: int64
 		formatString: 0

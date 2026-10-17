@@ -1,2 +1,802 @@
 cultureInfo ja-JP
 
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "zmi_202_5": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "zmi2025s"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "zmi 202 5": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "zmi2025s": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "zmi_202_5.年月コード": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "zmi2025s",
+			          "ConceptualProperty": "年月コード"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "年月コード": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "zmi_202_5.系列": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "zmi2025s",
+			          "ConceptualProperty": "系列"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "系列": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "zmi_202_5.指数": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "zmi2025s",
+			          "ConceptualProperty": "指数"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "指数": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "zmi_202_5.年月": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "zmi2025s",
+			          "ConceptualProperty": "年月"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "年月": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "zmi_202_5.指数値": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "zmi2025s",
+			          "ConceptualProperty": "指数（値）"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "指数（値）": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "指数": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "zmi_202_5.前年同月比": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "zmi2025s",
+			          "ConceptualProperty": "前年同月比"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "前年同月比": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "zmi_202_5.最新月": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "zmi2025s",
+			          "ConceptualProperty": "最新月"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "最新月": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "zmi_202_5.最新月ラベル": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "zmi2025s",
+			          "ConceptualProperty": "最新月ラベル"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "最新月ラベル": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "zmi_202_5.前年同月比最新月": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "zmi2025s",
+			          "ConceptualProperty": "前年同月比（最新月）"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "前年同月比（最新月）": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "前年同月比": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "総合": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "生鮮食品を除く総合": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "生鮮食品及びエネルギーを除く総合": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "日付": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "日付"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "日付": {
+			            "State": "Generated",
+			            "Weight": 0.87
+			          }
+			        }
+			      ]
+			    },
+			    "日付.日付": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "日付",
+			          "ConceptualProperty": "日付"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "日付": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "日付.年": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "日付",
+			          "ConceptualProperty": "年"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "年": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "日付.月": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "日付",
+			          "ConceptualProperty": "月"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "月": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "日付.年月ラベル": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "日付",
+			          "ConceptualProperty": "年月ラベル"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "年月ラベル": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "zmi_202_5_has_日付": {
+			      "Binding": {
+			        "ConceptualEntity": "zmi2025s"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "zmi_202_5": {
+			          "Target": {
+			            "Entity": "zmi_202_5"
+			          }
+			        },
+			        "日付": {
+			          "Target": {
+			            "Entity": "日付"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "zmi_202_5"
+			            },
+			            "Object": {
+			              "Role": "日付"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "zmi_202_5_have_日付"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "日付"
+			            },
+			            "Object": {
+			              "Role": "zmi_202_5"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "日付_have_zmi_202_5"
+			        }
+			      ]
+			    },
+			    "日付_has_年月ラベル": {
+			      "Binding": {
+			        "ConceptualEntity": "日付"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "日付": {
+			          "Target": {
+			            "Entity": "日付"
+			          }
+			        },
+			        "日付.年月ラベル": {
+			          "Target": {
+			            "Entity": "日付.年月ラベル"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "日付"
+			            },
+			            "Object": {
+			              "Role": "日付.年月ラベル"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "日付_have_年月ラベル"
+			        }
+			      ]
+			    },
+			    "日付_has_月": {
+			      "Binding": {
+			        "ConceptualEntity": "日付"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "日付": {
+			          "Target": {
+			            "Entity": "日付"
+			          }
+			        },
+			        "日付.月": {
+			          "Target": {
+			            "Entity": "日付.月"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "日付"
+			            },
+			            "Object": {
+			              "Role": "日付.月"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "日付_have_月"
+			        }
+			      ]
+			    },
+			    "日付_has_年": {
+			      "Binding": {
+			        "ConceptualEntity": "日付"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "日付": {
+			          "Target": {
+			            "Entity": "日付"
+			          }
+			        },
+			        "日付.年": {
+			          "Target": {
+			            "Entity": "日付.年"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "日付"
+			            },
+			            "Object": {
+			              "Role": "日付.年"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "日付_have_年"
+			        }
+			      ]
+			    },
+			    "日付_has_日付": {
+			      "Binding": {
+			        "ConceptualEntity": "日付"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "日付": {
+			          "Target": {
+			            "Entity": "日付"
+			          }
+			        },
+			        "日付.日付": {
+			          "Target": {
+			            "Entity": "日付.日付"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "日付"
+			            },
+			            "Object": {
+			              "Role": "日付.日付"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "日付_have_日付"
+			        }
+			      ]
+			    },
+			    "zmi_202_5_has_前年同月比最新月": {
+			      "Binding": {
+			        "ConceptualEntity": "zmi2025s"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "zmi_202_5": {
+			          "Target": {
+			            "Entity": "zmi_202_5"
+			          }
+			        },
+			        "zmi_202_5.前年同月比最新月": {
+			          "Target": {
+			            "Entity": "zmi_202_5.前年同月比最新月"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "zmi_202_5"
+			            },
+			            "Object": {
+			              "Role": "zmi_202_5.前年同月比最新月"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "zmi_202_5_have_前年同月比最新月"
+			        }
+			      ]
+			    },
+			    "zmi_202_5_has_最新月ラベル": {
+			      "Binding": {
+			        "ConceptualEntity": "zmi2025s"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "zmi_202_5": {
+			          "Target": {
+			            "Entity": "zmi_202_5"
+			          }
+			        },
+			        "zmi_202_5.最新月ラベル": {
+			          "Target": {
+			            "Entity": "zmi_202_5.最新月ラベル"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "zmi_202_5"
+			            },
+			            "Object": {
+			              "Role": "zmi_202_5.最新月ラベル"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "zmi_202_5_have_最新月ラベル"
+			        }
+			      ]
+			    },
+			    "zmi_202_5_has_最新月": {
+			      "Binding": {
+			        "ConceptualEntity": "zmi2025s"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "zmi_202_5": {
+			          "Target": {
+			            "Entity": "zmi_202_5"
+			          }
+			        },
+			        "zmi_202_5.最新月": {
+			          "Target": {
+			            "Entity": "zmi_202_5.最新月"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "zmi_202_5"
+			            },
+			            "Object": {
+			              "Role": "zmi_202_5.最新月"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "zmi_202_5_have_最新月"
+			        }
+			      ]
+			    },
+			    "zmi_202_5_has_前年同月比": {
+			      "Binding": {
+			        "ConceptualEntity": "zmi2025s"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "zmi_202_5": {
+			          "Target": {
+			            "Entity": "zmi_202_5"
+			          }
+			        },
+			        "zmi_202_5.前年同月比": {
+			          "Target": {
+			            "Entity": "zmi_202_5.前年同月比"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "zmi_202_5"
+			            },
+			            "Object": {
+			              "Role": "zmi_202_5.前年同月比"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "zmi_202_5_have_前年同月比"
+			        }
+			      ]
+			    },
+			    "zmi_202_5_has_指数値": {
+			      "Binding": {
+			        "ConceptualEntity": "zmi2025s"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "zmi_202_5": {
+			          "Target": {
+			            "Entity": "zmi_202_5"
+			          }
+			        },
+			        "zmi_202_5.指数値": {
+			          "Target": {
+			            "Entity": "zmi_202_5.指数値"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "zmi_202_5"
+			            },
+			            "Object": {
+			              "Role": "zmi_202_5.指数値"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "zmi_202_5_have_指数値"
+			        }
+			      ]
+			    },
+			    "zmi_202_5_has_年月": {
+			      "Binding": {
+			        "ConceptualEntity": "zmi2025s"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "zmi_202_5": {
+			          "Target": {
+			            "Entity": "zmi_202_5"
+			          }
+			        },
+			        "zmi_202_5.年月": {
+			          "Target": {
+			            "Entity": "zmi_202_5.年月"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "zmi_202_5"
+			            },
+			            "Object": {
+			              "Role": "zmi_202_5.年月"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "zmi_202_5_have_年月"
+			        }
+			      ]
+			    },
+			    "zmi_202_5_has_指数": {
+			      "Binding": {
+			        "ConceptualEntity": "zmi2025s"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "zmi_202_5": {
+			          "Target": {
+			            "Entity": "zmi_202_5"
+			          }
+			        },
+			        "zmi_202_5.指数": {
+			          "Target": {
+			            "Entity": "zmi_202_5.指数"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "zmi_202_5"
+			            },
+			            "Object": {
+			              "Role": "zmi_202_5.指数"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "zmi_202_5_have_指数"
+			        }
+			      ]
+			    },
+			    "zmi_202_5_has_系列": {
+			      "Binding": {
+			        "ConceptualEntity": "zmi2025s"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "zmi_202_5": {
+			          "Target": {
+			            "Entity": "zmi_202_5"
+			          }
+			        },
+			        "zmi_202_5.系列": {
+			          "Target": {
+			            "Entity": "zmi_202_5.系列"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "zmi_202_5"
+			            },
+			            "Object": {
+			              "Role": "zmi_202_5.系列"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "zmi_202_5_have_系列"
+			        }
+			      ]
+			    },
+			    "zmi_202_5_has_年月コード": {
+			      "Binding": {
+			        "ConceptualEntity": "zmi2025s"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "zmi_202_5": {
+			          "Target": {
+			            "Entity": "zmi_202_5"
+			          }
+			        },
+			        "zmi_202_5.年月コード": {
+			          "Target": {
+			            "Entity": "zmi_202_5.年月コード"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "zmi_202_5"
+			            },
+			            "Object": {
+			              "Role": "zmi_202_5.年月コード"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "zmi_202_5_have_年月コード"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

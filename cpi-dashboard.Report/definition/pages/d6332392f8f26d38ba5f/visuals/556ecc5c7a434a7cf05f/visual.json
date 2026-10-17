@@ -83,34 +83,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "4a329985868d09f7990d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "zmi2025s"
-              }
-            },
-            "Property": "指数（値）"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "8d0fbd86f32aeb28a4fa",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "zmi2025s"
-              }
-            },
-            "Property": "前年同月比"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "d13cb7675a3d76a3db0e",
         "field": {
           "Column": {
@@ -170,20 +142,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "a01ec04bbd84667b0cb8",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "zmi2025s"
-              }
-            },
-            "Property": "系列"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

@@ -38,6 +38,13 @@ table 日付
 
 		annotation SummarizationSetBy = Automatic
 
+	column 月初 = DATE('日付'[年], '日付'[月], 1)
+		formatString: General Date
+		lineageTag: f91735f3-dc44-4541-b14f-5af4e6925578
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 日付 = calculated
 		mode: import
 		source =

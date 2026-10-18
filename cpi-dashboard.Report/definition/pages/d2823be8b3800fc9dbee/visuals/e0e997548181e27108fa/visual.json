@@ -1,0 +1,224 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "e0e997548181e27108fa",
+  "position": {
+    "x": 10,
+    "y": 290,
+    "z": 2002,
+    "height": 508.33333333333337,
+    "width": 1176.6666666666667,
+    "tabOrder": 2002
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "日付"
+                    }
+                  },
+                  "Property": "月初"
+                }
+              },
+              "queryRef": "日付.月初",
+              "nativeQueryRef": "月初",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "系列マスタ"
+                    }
+                  },
+                  "Property": "系列"
+                }
+              },
+              "queryRef": "系列マスタ.系列",
+              "nativeQueryRef": "系列"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "zmy2025s"
+                    }
+                  },
+                  "Property": "前年同月比（公表）"
+                }
+              },
+              "queryRef": "zmy2025s.前年同月比（公表）",
+              "nativeQueryRef": "前年同月比（公表）"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "日付"
+                  }
+                },
+                "Property": "月初"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "y1AxisReferenceLine": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "displayName": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Y 軸の定数線 1'"
+                }
+              }
+            },
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "0.02D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "1"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "51d451d8d3a7f75e22dc",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "日付"
+              }
+            },
+            "Property": "月初"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "96c23f49b4d5be5ce1df",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "zmy2025s"
+              }
+            },
+            "Property": "前年同月比（公表）"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2b2bc5960fec3520e969",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "系列マスタ"
+              }
+            },
+            "Property": "系列"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "系",
+              "Entity": "系列マスタ",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "系"
+                          }
+                        },
+                        "Property": "系列"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'生鮮食品を除く総合'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'総合'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'生鮮食品及びエネルギーを除く総合'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+table 系列マスタ
+	lineageTag: e19db6d0-7ea7-4a89-9c69-b103d37cbcf7
+
+	column 系列
+		lineageTag: 13277e33-0a93-43e2-93f9-c9f13f0ad6a1
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [系列]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 系列マスタ = calculated
+		mode: import
+		source =
+				
+				DISTINCT(
+				    UNION(
+				        SELECTCOLUMNS(zmi2025s, "系列", zmi2025s[系列]),
+				        SELECTCOLUMNS(zmy2025s, "系列", zmy2025s[系列])
+				    )
+				)
+
+	annotation PBI_Id = 3e174eacbe5947d98f20f3f7368c8fde
+

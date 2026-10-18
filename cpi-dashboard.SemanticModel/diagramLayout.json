@@ -11,7 +11,7 @@
         {
           "location": {
             "x": 0,
-            "y": 12
+            "y": 373.42857142857144
           },
           "nodeIndex": "zmi2025s",
           "nodeLineageTag": "1d7fbac9-e0ec-44dd-bff5-fe45e42fda6b",
@@ -19,24 +19,25 @@
             "height": 176,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1
         },
         {
           "location": {
-            "x": 284,
-            "y": 0
+            "x": 308,
+            "y": 136
           },
           "nodeIndex": "日付",
+          "nodeLineageTag": "ec458f5b-0ae7-41dd-9825-538d1bcb7d43",
           "size": {
             "height": 200,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 3
         },
         {
           "location": {
-            "x": 568,
-            "y": 12
+            "x": 572.85714285714289,
+            "y": 364.85714285714289
           },
           "nodeIndex": "zmy2025s",
           "nodeLineageTag": "3f276e80-717f-4673-9953-94e6bae78dbf",
@@ -44,11 +45,24 @@
             "height": 176,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 304.85714285714278,
+            "y": 648.57142857142856
+          },
+          "nodeIndex": "系列マスタ",
+          "nodeLineageTag": "e19db6d0-7ea7-4a89-9c69-b103d37cbcf7",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 2
         }
       ],
       "name": "すべてのテーブル",
-      "zoomValue": 100,
+      "zoomValue": 70,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

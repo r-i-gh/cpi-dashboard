@@ -16,6 +16,7 @@ annotation PBI_ProTooling = ["DevMode"]
 ref table zmi2025s
 ref table 日付
 ref table zmy2025s
+ref table 系列マスタ
 
 ref cultureInfo ja-JP
 

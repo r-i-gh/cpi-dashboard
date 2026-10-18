@@ -51,6 +51,9 @@ cultureInfo ja-JP
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "系列": {
@@ -204,36 +207,6 @@ cultureInfo ja-JP
 			            "State": "Generated",
 			            "Weight": 0.75
 			          }
-			        },
-			        {
-			          "生鮮食品及びエネルギーを除く総合": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "総合": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "生鮮食品を除く総合": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -323,9 +296,355 @@ cultureInfo ja-JP
 			          }
 			        }
 			      ]
+			    },
+			    "zmy_202_5": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "zmy2025s"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "zmy 202 5": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "zmy2025s": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "zmy_202_5.年月コード": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "zmy2025s",
+			          "ConceptualProperty": "年月コード"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "年月コード": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "zmy_202_5.系列": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "zmy2025s",
+			          "ConceptualProperty": "系列"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "系列": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "zmy_202_5.前年同月比_公表": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "zmy2025s",
+			          "ConceptualProperty": "前年同月比_公表"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "前年同月比 公表": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "前年同月比_公表": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "zmy_202_5.年月": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "zmy2025s",
+			          "ConceptualProperty": "年月"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "年月": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "zmy_202_5.前年同月比公表": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "zmy2025s",
+			          "ConceptualProperty": "前年同月比（公表）"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "前年同月比（公表）": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "前年同月比": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "zmy_202_5.前年同月比公表最新月": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "zmy2025s",
+			          "ConceptualProperty": "前年同月比（公表・最新月）"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "前年同月比（公表・最新月）": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "前年同月比": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "生鮮食品及びエネルギーを除く総合": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "総合": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "生鮮食品を除く総合": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "系列マスタ": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "系列マスタ"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "系列マスタ": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "系列マスタ.系列": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "系列マスタ",
+			          "ConceptualProperty": "系列"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "系列": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "zmy_202_5_has_日付": {
+			      "Binding": {
+			        "ConceptualEntity": "zmy2025s"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "zmy_202_5": {
+			          "Target": {
+			            "Entity": "zmy_202_5"
+			          }
+			        },
+			        "日付": {
+			          "Target": {
+			            "Entity": "日付"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "zmy_202_5"
+			            },
+			            "Object": {
+			              "Role": "日付"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "zmy_202_5_have_日付"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "日付"
+			            },
+			            "Object": {
+			              "Role": "zmy_202_5"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "日付_have_zmy_202_5"
+			        }
+			      ]
+			    },
+			    "zmy_202_5_has_系列マスタ": {
+			      "Binding": {
+			        "ConceptualEntity": "zmy2025s"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "zmy_202_5": {
+			          "Target": {
+			            "Entity": "zmy_202_5"
+			          }
+			        },
+			        "系列マスタ": {
+			          "Target": {
+			            "Entity": "系列マスタ"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "zmy_202_5"
+			            },
+			            "Object": {
+			              "Role": "系列マスタ"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "zmy_202_5_have_系列マスタ"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "系列マスタ"
+			            },
+			            "Object": {
+			              "Role": "zmy_202_5"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "系列マスタ_have_zmy_202_5"
+			        }
+			      ]
+			    },
+			    "zmi_202_5_has_系列マスタ": {
+			      "Binding": {
+			        "ConceptualEntity": "zmi2025s"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "zmi_202_5": {
+			          "Target": {
+			            "Entity": "zmi_202_5"
+			          }
+			        },
+			        "系列マスタ": {
+			          "Target": {
+			            "Entity": "系列マスタ"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "zmi_202_5"
+			            },
+			            "Object": {
+			              "Role": "系列マスタ"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "zmi_202_5_have_系列マスタ"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "系列マスタ"
+			            },
+			            "Object": {
+			              "Role": "zmi_202_5"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "系列マスタ_have_zmi_202_5"
+			        }
+			      ]
+			    },
 			    "zmi_202_5_has_日付": {
 			      "Binding": {
 			        "ConceptualEntity": "zmi2025s"
@@ -369,6 +688,270 @@ cultureInfo ja-JP
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "日付_have_zmi_202_5"
+			        }
+			      ]
+			    },
+			    "系列マスタ_has_系列": {
+			      "Binding": {
+			        "ConceptualEntity": "系列マスタ"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "系列マスタ": {
+			          "Target": {
+			            "Entity": "系列マスタ"
+			          }
+			        },
+			        "系列マスタ.系列": {
+			          "Target": {
+			            "Entity": "系列マスタ.系列"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "系列マスタ"
+			            },
+			            "Object": {
+			              "Role": "系列マスタ.系列"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "系列マスタ_have_系列"
+			        }
+			      ]
+			    },
+			    "系列マスタ_has_zmy_202_5_前年同月比公表最新月": {
+			      "Binding": {
+			        "ConceptualEntity": "系列マスタ"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "系列マスタ": {
+			          "Target": {
+			            "Entity": "系列マスタ"
+			          }
+			        },
+			        "zmy_202_5.前年同月比公表最新月": {
+			          "Target": {
+			            "Entity": "zmy_202_5.前年同月比公表最新月"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "系列マスタ"
+			            },
+			            "Object": {
+			              "Role": "zmy_202_5.前年同月比公表最新月"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "系列マスタ_have_前年同月比公表最新月"
+			        }
+			      ]
+			    },
+			    "zmy_202_5_has_前年同月比公表最新月": {
+			      "Binding": {
+			        "ConceptualEntity": "zmy2025s"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "zmy_202_5": {
+			          "Target": {
+			            "Entity": "zmy_202_5"
+			          }
+			        },
+			        "zmy_202_5.前年同月比公表最新月": {
+			          "Target": {
+			            "Entity": "zmy_202_5.前年同月比公表最新月"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "zmy_202_5"
+			            },
+			            "Object": {
+			              "Role": "zmy_202_5.前年同月比公表最新月"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "zmy_202_5_have_前年同月比公表最新月"
+			        }
+			      ]
+			    },
+			    "系列マスタ_has_zmy_202_5_前年同月比公表": {
+			      "Binding": {
+			        "ConceptualEntity": "系列マスタ"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "系列マスタ": {
+			          "Target": {
+			            "Entity": "系列マスタ"
+			          }
+			        },
+			        "zmy_202_5.前年同月比公表": {
+			          "Target": {
+			            "Entity": "zmy_202_5.前年同月比公表"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "系列マスタ"
+			            },
+			            "Object": {
+			              "Role": "zmy_202_5.前年同月比公表"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "系列マスタ_have_前年同月比公表"
+			        }
+			      ]
+			    },
+			    "zmy_202_5_has_前年同月比公表": {
+			      "Binding": {
+			        "ConceptualEntity": "zmy2025s"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "zmy_202_5": {
+			          "Target": {
+			            "Entity": "zmy_202_5"
+			          }
+			        },
+			        "zmy_202_5.前年同月比公表": {
+			          "Target": {
+			            "Entity": "zmy_202_5.前年同月比公表"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "zmy_202_5"
+			            },
+			            "Object": {
+			              "Role": "zmy_202_5.前年同月比公表"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "zmy_202_5_have_前年同月比公表"
+			        }
+			      ]
+			    },
+			    "zmy_202_5_has_年月": {
+			      "Binding": {
+			        "ConceptualEntity": "zmy2025s"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "zmy_202_5": {
+			          "Target": {
+			            "Entity": "zmy_202_5"
+			          }
+			        },
+			        "zmy_202_5.年月": {
+			          "Target": {
+			            "Entity": "zmy_202_5.年月"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "zmy_202_5"
+			            },
+			            "Object": {
+			              "Role": "zmy_202_5.年月"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "zmy_202_5_have_年月"
+			        }
+			      ]
+			    },
+			    "zmy_202_5_has_前年同月比_公表": {
+			      "Binding": {
+			        "ConceptualEntity": "zmy2025s"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "zmy_202_5": {
+			          "Target": {
+			            "Entity": "zmy_202_5"
+			          }
+			        },
+			        "zmy_202_5.前年同月比_公表": {
+			          "Target": {
+			            "Entity": "zmy_202_5.前年同月比_公表"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "zmy_202_5"
+			            },
+			            "Object": {
+			              "Role": "zmy_202_5.前年同月比_公表"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "zmy_202_5_have_前年同月比_公表"
+			        }
+			      ]
+			    },
+			    "zmy_202_5_has_年月コード": {
+			      "Binding": {
+			        "ConceptualEntity": "zmy2025s"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "zmy_202_5": {
+			          "Target": {
+			            "Entity": "zmy_202_5"
+			          }
+			        },
+			        "zmy_202_5.年月コード": {
+			          "Target": {
+			            "Entity": "zmy_202_5.年月コード"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "zmy_202_5"
+			            },
+			            "Object": {
+			              "Role": "zmy_202_5.年月コード"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "zmy_202_5_have_年月コード"
 			        }
 			      ]
 			    },
@@ -732,39 +1315,6 @@ cultureInfo ja-JP
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "zmi_202_5_have_指数"
-			        }
-			      ]
-			    },
-			    "zmi_202_5_has_系列": {
-			      "Binding": {
-			        "ConceptualEntity": "zmi2025s"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "zmi_202_5": {
-			          "Target": {
-			            "Entity": "zmi_202_5"
-			          }
-			        },
-			        "zmi_202_5.系列": {
-			          "Target": {
-			            "Entity": "zmi_202_5.系列"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "zmi_202_5"
-			            },
-			            "Object": {
-			              "Role": "zmi_202_5.系列"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "zmi_202_5_have_系列"
 			        }
 			      ]
 			    },

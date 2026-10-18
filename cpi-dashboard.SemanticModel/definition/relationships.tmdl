@@ -2,3 +2,15 @@ relationship 2b9b417d-098d-d591-a395-4bb1dba5c61d
 	fromColumn: zmi2025s.年月
 	toColumn: 日付.日付
 
+relationship 0a8f1d9c-abf4-20e0-7f98-43381e5c10dc
+	fromColumn: zmi2025s.系列
+	toColumn: 系列マスタ.系列
+
+relationship 1d9961fc-986f-3685-fe63-1ac7b0e80c71
+	fromColumn: zmy2025s.系列
+	toColumn: 系列マスタ.系列
+
+relationship 8c9127f9-24a7-38e6-98f2-60194a6d660c
+	fromColumn: zmy2025s.年月
+	toColumn: 日付.日付
+

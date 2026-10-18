@@ -20,13 +20,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "zmi2025s"
+                      "Entity": "zmy2025s"
                     }
                   },
-                  "Property": "前年同月比（最新月）"
+                  "Property": "前年同月比（公表・最新月）"
                 }
               },
-              "queryRef": "zmi2025s.前年同月比（最新月）",
+              "queryRef": "zmy2025s.前年同月比（公表・最新月）",
               "nativeQueryRef": "生鮮食品を除く総合",
               "displayName": "生鮮食品を除く総合"
             }
@@ -40,10 +40,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "zmi2025s"
+                    "Entity": "zmy2025s"
                   }
                 },
-                "Property": "前年同月比（最新月）"
+                "Property": "前年同月比（公表・最新月）"
               }
             },
             "direction": "Descending"
@@ -57,12 +57,26 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "ca2c6f26ee98eda96e12",
+        "name": "95422fffc53fd88bc8b6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "zmy2025s"
+              }
+            },
+            "Property": "前年同月比（公表・最新月）"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "82fdb5a99365cca4ca74",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "zmi2025s"
+                "Entity": "系列マスタ"
               }
             },
             "Property": "系列"
@@ -73,8 +87,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "z",
-              "Entity": "zmi2025s",
+              "Name": "系",
+              "Entity": "系列マスタ",
               "Type": 0
             }
           ],
@@ -87,7 +101,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "z"
+                            "Source": "系"
                           }
                         },
                         "Property": "系列"
@@ -109,20 +123,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "88a7ab5e8acf1d41b498",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "zmi2025s"
-              }
-            },
-            "Property": "前年同月比（最新月）"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

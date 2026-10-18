@@ -1,6 +1,27 @@
 table zmy2025s
 	lineageTag: 3f276e80-717f-4673-9953-94e6bae78dbf
 
+	measure 前年同月比（公表） =
+			
+			IF(
+			    HASONEVALUE('系列マスタ'[系列]),
+			    DIVIDE(AVERAGE(zmy2025s[前年同月比_公表]), 100)
+			)
+		lineageTag: 2d85a14f-3594-4663-af21-f0e7fa5662c4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 前年同月比（公表・最新月） =
+			
+			VAR LatestDate = [最新月]
+			RETURN
+			CALCULATE(
+			    [前年同月比（公表）],
+			    DATESBETWEEN('日付'[日付], LatestDate, EOMONTH(LatestDate, 0))
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: c9981a61-27e4-41d1-969b-51d5f8867966
+
 	column 年月コード
 		dataType: int64
 		formatString: 0

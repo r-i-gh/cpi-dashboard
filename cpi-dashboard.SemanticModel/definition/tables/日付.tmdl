@@ -15,7 +15,7 @@ table 日付
 	column 年
 		formatString: 0
 		lineageTag: e725b436-f8d7-47e1-abb2-2a3ef99c1b94
-		summarizeBy: none
+		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [年]
 
@@ -24,7 +24,7 @@ table 日付
 	column 月
 		formatString: 0
 		lineageTag: 5be67a8f-98d1-4ce8-b984-4cb2a45fba8b
-		summarizeBy: none
+		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [月]
 

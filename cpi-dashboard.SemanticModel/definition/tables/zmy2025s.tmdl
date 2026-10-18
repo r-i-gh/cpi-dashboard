@@ -7,9 +7,8 @@ table zmy2025s
 			    HASONEVALUE('系列マスタ'[系列]),
 			    DIVIDE(AVERAGE(zmy2025s[前年同月比_公表]), 100)
 			)
+		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 2d85a14f-3594-4663-af21-f0e7fa5662c4
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 前年同月比（公表・最新月） =
 			

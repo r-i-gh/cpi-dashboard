@@ -43,6 +43,46 @@ table zmi2025s
 		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 3331b55c-35cb-4358-a523-920430bdd223
 
+	measure 寄与度 =
+			
+			VAR W = SELECTEDVALUE('系列マスタ'[ウエイト])
+			VAR CurIdx = [指数（値）]
+			VAR PrevIdx = CALCULATE([指数（値）], SAMEPERIODLASTYEAR('日付'[日付]))
+			VAR PrevTotal =
+			    CALCULATE(
+			        [指数（値）],
+			        SAMEPERIODLASTYEAR('日付'[日付]),
+			        REMOVEFILTERS('系列マスタ'),
+			        '系列マスタ'[系列] = "総合"
+			    )
+			RETURN
+			IF(
+			    NOT ISBLANK(CurIdx) && NOT ISBLANK(PrevIdx) && NOT ISBLANK(W),
+			    DIVIDE((CurIdx - PrevIdx) * W / 10000, PrevTotal)
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: d8f4ba29-4645-4842-bec6-95fc25911c0b
+
+	measure 寄与度（最新月） =
+			
+			VAR LatestDate = [最新月]
+			RETURN
+			CALCULATE(
+			    [寄与度],
+			    DATESBETWEEN('日付'[日付], LatestDate, EOMONTH(LatestDate, 0))
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: bf7ec796-6749-46a8-8122-1f202c7d1988
+
+	measure 寄与度合計（10大費目・最新月） =
+			
+			SUMX(
+			    FILTER(ALL('系列マスタ'), '系列マスタ'[区分] = "10大費目"),
+			    [寄与度（最新月）]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 0056b9ba-0e63-46df-81a9-10131f7d8afb
+
 	column 年月コード
 		dataType: int64
 		formatString: 0

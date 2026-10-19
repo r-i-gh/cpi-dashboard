@@ -31,9 +31,6 @@
               "displayName": "総合"
             }
           ]
-        },
-        "Rows": {
-          "projections": []
         }
       },
       "sortDefinition": {
@@ -59,20 +56,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "2d90e61824cf1e324987",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "zmy2025s"
-              }
-            },
-            "Property": "前年同月比（公表・最新月）"
-          }
-        },
-        "type": "Advanced"
-      },
       {
         "name": "5a17da08a927f592e7dc",
         "field": {

@@ -4,10 +4,10 @@
   "position": {
     "x": 10,
     "y": 813.33333333333337,
-    "z": 2003,
+    "z": 5000,
     "height": 116.66666666666667,
     "width": 1176.6666666666667,
-    "tabOrder": 2003
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "slicer",
@@ -117,23 +117,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "531e1cd7e08dc9538e5b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "日付"
-              }
-            },
-            "Property": "月初"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

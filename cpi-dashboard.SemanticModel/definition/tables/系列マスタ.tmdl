@@ -9,6 +9,30 @@ table 系列マスタ
 
 		annotation SummarizationSetBy = Automatic
 
+	column ウエイト =
+			
+			LOOKUPVALUE('ウエイト表'[ウエイト], 'ウエイト表'[系列], '系列マスタ'[系列])
+		formatString: 0
+		lineageTag: 794ca802-4308-4e5b-849c-605d6023420d
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 区分 =
+			
+			IF(
+			    '系列マスタ'[系列] IN {
+			        "食料", "住居", "光熱・水道", "家具・家事用品", "被服及び履物",
+			        "保健医療", "交通・通信", "教育", "教養娯楽", "諸雑費"
+			    },
+			    "10大費目",
+			    "その他"
+			)
+		lineageTag: aced35f9-50b6-4d95-8d40-886caddb107f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 系列マスタ = calculated
 		mode: import
 		source =

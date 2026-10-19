@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "556ecc5c7a434a7cf05f",
   "position": {
-    "x": 9.14580593941499,
+    "x": 8.3333333333333339,
     "y": 0,
     "z": 0,
-    "height": 893.240380082864,
-    "width": 646.30361971865932,
+    "height": 823.33333333333337,
+    "width": 646.66666666666674,
     "tabOrder": 0
   },
   "visual": {
@@ -142,6 +142,48 @@
             }
           ]
         }
+      },
+      {
+        "name": "286f225f249f82099d0d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "zmi2025s"
+              }
+            },
+            "Property": "指数（値）"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3e1345bee0e89b7ce471",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "zmi2025s"
+              }
+            },
+            "Property": "前年同月比"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "37afede4f9500c216efa",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "zmi2025s"
+              }
+            },
+            "Property": "系列"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

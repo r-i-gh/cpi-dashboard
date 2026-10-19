@@ -57,20 +57,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "95422fffc53fd88bc8b6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "zmy2025s"
-              }
-            },
-            "Property": "前年同月比（公表・最新月）"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "82fdb5a99365cca4ca74",
         "field": {
           "Column": {

@@ -1,0 +1,176 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "4e5e94e6a6214a745886",
+  "position": {
+    "x": 655,
+    "y": 0,
+    "z": 1000,
+    "height": 395,
+    "width": 410,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "系列マスタ"
+                    }
+                  },
+                  "Property": "系列"
+                }
+              },
+              "queryRef": "系列マスタ.系列",
+              "nativeQueryRef": "系列"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "系列マスタ"
+                        }
+                      },
+                      "Property": "ウエイト"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(系列マスタ.ウエイト)",
+              "nativeQueryRef": "ウエイト の合計"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "zmi2025s"
+                    }
+                  },
+                  "Property": "寄与度（最新月）"
+                }
+              },
+              "queryRef": "zmi2025s.寄与度（最新月）",
+              "nativeQueryRef": "寄与度（最新月）"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5256786183e4df0caa10",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "系列マスタ"
+              }
+            },
+            "Property": "区分"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "系",
+              "Entity": "系列マスタ",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "系"
+                          }
+                        },
+                        "Property": "区分"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'10大費目'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "92b594f8d3f4d373c1f5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "系列マスタ"
+              }
+            },
+            "Property": "系列"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "3dabedd562b93f3a50b2",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "系列マスタ"
+                  }
+                },
+                "Property": "ウエイト"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "74e8f41876cf46deab62",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "zmi2025s"
+              }
+            },
+            "Property": "寄与度（最新月）"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

@@ -4,10 +4,10 @@
   "position": {
     "x": 848,
     "y": 0,
-    "z": 2001,
+    "z": 3000,
     "height": 280,
     "width": 338,
-    "tabOrder": 2001
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -56,20 +56,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "0f3ebb704e5d1988bbec",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "zmy2025s"
-              }
-            },
-            "Property": "前年同月比（公表・最新月）"
-          }
-        },
-        "type": "Advanced"
-      },
       {
         "name": "d2075ecc8084133ee423",
         "field": {

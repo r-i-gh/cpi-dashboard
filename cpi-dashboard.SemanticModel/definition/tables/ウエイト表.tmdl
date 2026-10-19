@@ -1,0 +1,38 @@
+table ウエイト表
+	lineageTag: 55e38191-8f08-49ea-a2fc-3481967c34c6
+
+	column 系列
+		dataType: string
+		lineageTag: 3df661ba-5eed-4dd6-9b3f-40ac3364f87e
+		summarizeBy: none
+		sourceColumn: 系列
+
+		annotation SummarizationSetBy = Automatic
+
+	column ウエイト
+		dataType: int64
+		formatString: 0
+		lineageTag: a15331fe-8522-4169-aab9-ad1a25de4a43
+		summarizeBy: sum
+		sourceColumn: ウエイト
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ウエイト表 = m
+		mode: import
+		source =
+				let
+				  ソース = Csv.Document(File.Contents("C:\Users\rio\Documents\cpi-dashboard\data\zmy2025s.csv"), [Delimiter = ",", Columns = 79, Encoding = 932]),
+				  昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars = true]),
+				  フィルター処理された行 = Table.SelectRows(昇格されたヘッダー数, each ([#"類・品目"] = "ウエイト１万分比(Weight per 10000)")),
+				  変更された列タイプ = Table.TransformColumnTypes(フィルター処理された行, {{"類・品目", type text}, {"総合", Int64.Type}, {"生鮮食品を除く総合", Int64.Type}, {"持家の帰属家賃を除く総合", Int64.Type}, {"持家の帰属家賃及び生鮮食品を除く総合", Int64.Type}, {"生鮮食品及びエネルギーを除く総合", Int64.Type}, {"食料（酒類を除く）及びエネルギーを除く総合", Int64.Type}, {"食料", Int64.Type}, {"生鮮食品", Int64.Type}, {"生鮮食品を除く食料", Int64.Type}, {"穀類", Int64.Type}, {"魚介類", Int64.Type}, {"生鮮魚介（再掲）", Int64.Type}, {"肉類", Int64.Type}, {"乳卵類", Int64.Type}, {"野菜・海藻", Int64.Type}, {"生鮮野菜（再掲）", Int64.Type}, {"果物", Int64.Type}, {"生鮮果物（再掲）", Int64.Type}, {"油脂・調味料", Int64.Type}, {"菓子類", Int64.Type}, {"調理食品", Int64.Type}, {"飲料", Int64.Type}, {"酒類", Int64.Type}, {"外食", Int64.Type}, {"住居", Int64.Type}, {"持家の帰属家賃を除く住居", Int64.Type}, {"家賃", Int64.Type}, {"持家の帰属家賃を除く家賃", Int64.Type}, {"設備修繕・維持", Int64.Type}, {"光熱・水道", Int64.Type}, {"電気代", Int64.Type}, {"ガス代", Int64.Type}, {"他の光熱", Int64.Type}, {"上下水道料", Int64.Type}, {"家具・家事用品", Int64.Type}, {"家庭用耐久財", Int64.Type}, {"室内装備品", Int64.Type}, {"寝具類", Int64.Type}, {"家事雑貨", Int64.Type}, {"家事用消耗品", Int64.Type}, {"家事サービス", Int64.Type}, {"被服及び履物", Int64.Type}, {"衣料", Int64.Type}, {"和服", Int64.Type}, {"洋服", Int64.Type}, {"シャツ・セーター・下着類", Int64.Type}, {"シャツ・セーター類", Int64.Type}, {"下着類", Int64.Type}, {"履物類", Int64.Type}, {"他の被服", Int64.Type}, {"被服関連サービス", Int64.Type}, {"保健医療", Int64.Type}, {"医薬品・健康保持用摂取品", Int64.Type}, {"保健医療用品・器具", Int64.Type}, {"保健医療サービス", Int64.Type}, {"交通・通信", Int64.Type}, {"交通", Int64.Type}, {"自動車等関係費", Int64.Type}, {"通信", Int64.Type}, {"教育", Int64.Type}, {"授業料等", Int64.Type}, {"教科書・学習参考教材", Int64.Type}, {"補習教育", Int64.Type}, {"教養娯楽", Int64.Type}, {"教養娯楽用耐久財", Int64.Type}, {"教養娯楽用品", Int64.Type}, {"書籍・他の印刷物", Int64.Type}, {"教養娯楽サービス", Int64.Type}, {"諸雑費", Int64.Type}, {"理美容サービス", Int64.Type}, {"理美容用品", Int64.Type}, {"身の回り用品", Int64.Type}, {"たばこ", Int64.Type}, {"他の諸雑費", Int64.Type}, {"エネルギー", Int64.Type}, {"教育関係費", Int64.Type}, {"教養娯楽関係費", Int64.Type}, {"情報通信関係費", Int64.Type}}, "ja"),
+				  ピボット解除された他の列 = Table.UnpivotOtherColumns(変更された列タイプ, {"類・品目"}, "属性", "値"),
+				  削除された列 = Table.RemoveColumns(ピボット解除された他の列, {"類・品目"}),
+				  名前が変更された列 = Table.RenameColumns(削除された列, {{"値", "ウエイト"}}),
+				  #"変更された列タイプ 1" = Table.TransformColumnTypes(名前が変更された列, {{"ウエイト", Int64.Type}}),
+				    #"名前が変更された列 " = Table.RenameColumns(#"変更された列タイプ 1", {{"属性", "系列"}})
+				in
+				  #"名前が変更された列 "
+
+	annotation PBI_ResultType = Table
+

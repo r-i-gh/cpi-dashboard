@@ -9,7 +9,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["zmi2025s","zmy2025s"]
+annotation PBI_QueryOrder = ["zmi2025s","zmy2025s","ウエイト表"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -17,6 +17,7 @@ ref table zmi2025s
 ref table 日付
 ref table zmy2025s
 ref table 系列マスタ
+ref table ウエイト表
 
 ref cultureInfo ja-JP
 

@@ -281,6 +281,34 @@
             }
           ]
         }
+      },
+      {
+        "name": "2ea5a31bcdae40581dcf",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "日付"
+              }
+            },
+            "Property": "月初"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "95d698f3c39490eaad0b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "zmy2025s"
+              }
+            },
+            "Property": "前年同月比（公表）"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

@@ -1,0 +1,175 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "17dffcb310a448ffec15",
+  "position": {
+    "x": 10.185185185185185,
+    "y": 0,
+    "z": 0,
+    "height": 279.62962962962962,
+    "width": 630.55555555555554,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "waterfallChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "系列マスタ"
+                    }
+                  },
+                  "Property": "系列"
+                }
+              },
+              "queryRef": "系列マスタ.系列",
+              "nativeQueryRef": "系列",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "zmi2025s"
+                    }
+                  },
+                  "Property": "寄与度（最新月・表示用）"
+                }
+              },
+              "queryRef": "zmi2025s.寄与度（最新月・表示用）",
+              "nativeQueryRef": "寄与度（最新月・表示用）"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "zmi2025s"
+                  }
+                },
+                "Property": "寄与度（最新月・表示用）"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'費目別の寄与度（総合の前年同月比の内訳・最新月）'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8e952129c10a4b291778",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "系列マスタ"
+              }
+            },
+            "Property": "系列"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f2fef0274bfa0166d815",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "zmi2025s"
+              }
+            },
+            "Property": "寄与度（最新月・表示用）"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "83469e578dfc36f88e54",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "系列マスタ"
+              }
+            },
+            "Property": "区分"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "系",
+              "Entity": "系列マスタ",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "系"
+                          }
+                        },
+                        "Property": "区分"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'10大費目'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
+  }
+}

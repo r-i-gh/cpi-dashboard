@@ -109,6 +109,20 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "63c235a768bc534fe856",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "zmy2025s"
+              }
+            },
+            "Property": "前年同月比（公表・最新月）"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

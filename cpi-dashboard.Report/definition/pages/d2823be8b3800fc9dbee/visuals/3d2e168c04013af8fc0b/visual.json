@@ -35,5 +35,23 @@
       }
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "005936a509e6e3f464d9",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "zmi2025s"
+              }
+            },
+            "Property": "最新月ラベル"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

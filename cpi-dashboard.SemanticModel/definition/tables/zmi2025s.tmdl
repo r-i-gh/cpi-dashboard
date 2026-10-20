@@ -92,6 +92,15 @@ table zmi2025s
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 2b0af809-ddd0-488a-a7c7-ca170443ab12
 
+	measure 寄与度（表示用） =
+			
+			SUMX(
+			    VALUES('系列マスタ'[系列]),
+			    [寄与度]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 0a9cc71b-2a62-4f78-9396-8a1c044650ea
+
 	column 年月コード
 		dataType: int64
 		formatString: 0

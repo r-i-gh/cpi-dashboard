@@ -33,10 +33,12 @@
 | --- | --- | --- |
 | `zmi2025s.csv` | 中分類指数（全国・月次、2025年=100） | 1970年1月〜2026年8月 |
 | `zmy2025s.csv` | 中分類指数の前年同月比（公表値、%） | 同上 |
+| `zmi2025b.csv` | 財・サービス分類指数（全国・月次、2025年=100）。現在のダッシュボードでは未使用 | 同上 |
 
 - 取得元：e-Stat（政府統計の総合窓口）
   - zmi2025s.csv：https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040482943&fileKind=1
   - zmy2025s.csv：https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040482953&fileKind=1
+  - zmi2025b.csv：https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040482946&fileKind=1
 - 文字コードは Shift_JIS（cp932）。先頭6行が見出し（系列名、英語名、符号、連番、ウエイト、ウエイト1万分比）で、7行目以降が年月ごとの値
 - 2025年基準より前の期間は、接続指数（基準年の異なる指数を2025年=100に接続したもの）
 

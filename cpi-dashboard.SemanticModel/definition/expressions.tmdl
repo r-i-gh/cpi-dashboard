@@ -1,6 +1,6 @@
 expression DataFolder =
 		let
-		    ソース = "   C:\Users\rio\Documents\cpi-dashboard\data\" meta [IsParameterQuery = true, IsParameterQueryRequired = false, Type = type text]
+		    ソース = "C:\Users\rio\Documents\cpi-dashboard\data\" meta [IsParameterQuery = true, IsParameterQueryRequired = false, Type = type text]
 		in
 		    ソース
 	lineageTag: 27218843-6375-4e3f-921b-4d29e9dbedae

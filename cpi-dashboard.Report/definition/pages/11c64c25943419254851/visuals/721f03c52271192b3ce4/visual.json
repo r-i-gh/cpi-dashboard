@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "721f03c52271192b3ce4",
+  "position": {
+    "x": 15.281259067858672,
+    "y": 896.50053198104206,
+    "z": 2,
+    "height": 39.052106506749936,
+    "width": 794.62547152865091,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "寄与度は、当月・前年同月ともに2025年基準の指数となる2026年1月以降を表示しています。",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#666666"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
